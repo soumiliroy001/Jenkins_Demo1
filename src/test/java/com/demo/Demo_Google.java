@@ -5,10 +5,13 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class Demo_Google {
 
-	public static void main(String[] args) {
+	@Test
+	public void test() {
+	
 		System.setProperty("webdriver.chrome.driver","chromedriver.exe");
 		WebDriver driver;
 		driver= new ChromeDriver();
@@ -18,7 +21,5 @@ public class Demo_Google {
 		search.sendKeys("Selenium");
 		search.sendKeys(Keys.ENTER);
 		driver.findElement(By.xpath("//h3[@class='LC20lb MBeuO DKV0Md']")).click();
-		
 	}
-
-}
+	}
